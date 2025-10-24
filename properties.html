@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties - Christian Quinto </title>
+    <meta name="description" content="Browse our extensive collection of premium properties including houses, condominiums, subdivisions, and land properties across the Philippines.">
+    <meta name="keywords" content="properties, houses, condominiums, subdivisions, land, real estate, Philippines">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="home.html">
+                <i class="fas fa-home me-2"></i>
+                Christian Quinto
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="properties.html">Properties</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="py-5 bg-primary text-white" style="margin-top: 80px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 fw-bold mb-3">Our Properties</h1>
+                    <p class="lead text-white">
+                        Discover our extensive collection of premium properties across the Philippines. 
+                        From luxury homes to investment opportunities, find your perfect match.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Property Filters -->
+    <section class="py-4 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row g-3">
+                                <div class="col-md-3">
+                                    <label for="filter-type" class="form-label">Property Type</label>
+                                    <select class="form-select" id="filter-type">
+                                        <option value="">All Types</option>
+                                        <option value="house">House</option>
+                                        <option value="condominium">Condominium</option>
+                                        <option value="subdivision">Subdivision</option>
+                                        <option value="land">Land</option>
+                                        <option value="commercial">Commercial</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="filter-price" class="form-label">Price Range</label>
+                                    <select class="form-select" id="filter-price">
+                                        <option value="">All Prices</option>
+                                        <option value="0-1000000">Under ₱1M</option>
+                                        <option value="1000000-5000000">₱1M - ₱5M</option>
+                                        <option value="5000000-10000000">₱5M - ₱10M</option>
+                                        <option value="10000000-999999999">Above ₱10M</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="filter-bedrooms" class="form-label">Bedrooms</label>
+                                    <select class="form-select" id="filter-bedrooms">
+                                        <option value="">Bedrooms</option>
+                                        <option value="1">1+ Bedroom</option>
+                                        <option value="2">2+ Bedrooms</option>
+                                        <option value="3">3+ Bedrooms</option>
+                                        <option value="4">4+ Bedrooms</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="filter-location" class="form-label">Location</label>
+                                    <select class="form-select" id="filter-location">
+                                        <option value="">All Locations</option>
+                                        <option value="makati">Makati City</option>
+                                        <option value="bgc">BGC, Taguig</option>
+                                        <option value="quezon">Quezon City</option>
+                                        <option value="cavite">Cavite</option>
+                                        <option value="laguna">Laguna</option>
+                                        <option value="ortigas">Ortigas Center</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-12 text-center">
+                                    <button class="btn btn-outline-primary me-2" id="clear-filters">
+                                        <i class="fas fa-times me-2"></i>
+                                        Clear Filters
+                                    </button>
+                                    <button class="btn btn-primary" id="apply-filters">
+                                        <i class="fas fa-search me-2"></i>
+                                        Apply Filters
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Properties Grid -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h3 class="mb-0">Available Properties</h3>
+                        <div class="d-flex align-items-center gap-3">
+                            <span class="text-muted">Sort by:</span>
+                            <select class="form-select" style="width: auto;" id="sort-properties">
+                                <option value="newest">Newest First</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="featured">Featured First</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row" id="properties-grid">
+                <!-- Properties will be loaded here via JavaScript -->
+            </div>
+            
+            <!-- Load More Button -->
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <button class="btn btn-primary btn-lg" id="load-more-btn" style="display: none;">
+                        <i class="fas fa-plus me-2"></i>
+                        Load More Properties
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Property Details Modal -->
+    <div class="modal fade" id="propertyModal" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="propertyModalTitle">Property Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="propertyModalBody">
+                    <!-- Property details will be loaded here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="inquiryBtn">Make Inquiry</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Inquiry Modal -->
+    <div class="modal fade" id="inquiryModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Property Inquiry</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="inquiryForm">
+                        <input type="hidden" id="inquiry-property-id" name="property_id">
+                        <div class="mb-3">
+                            <label for="inquiry-name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="inquiry-name" name="customer_name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="inquiry-email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="inquiry-email" name="customer_email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="inquiry-phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="inquiry-phone" name="customer_phone">
+                        </div>
+                        <div class="mb-3">
+                            <label for="inquiry-type" class="form-label">Inquiry Type</label>
+                            <select class="form-select" id="inquiry-type" name="inquiry_type">
+                                <option value="general">General Inquiry</option>
+                                <option value="viewing">Schedule Viewing</option>
+                                <option value="price">Price Information</option>
+                                <option value="financing">Financing Options</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="inquiry-message" class="form-label">Message</label>
+                            <textarea class="form-control" id="inquiry-message" name="message" rows="4" required></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="submitInquiryBtn">Submit Inquiry</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action Section -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h3 class="fw-bold mb-3">Can't Find What You're Looking For?</h3>
+                    <p class="lead mb-0">
+                        Let us know your specific requirements and we'll help you find the perfect property.
+                    </p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="contact.html" class="btn btn-light btn-lg">
+                        <i class="fas fa-envelope me-2"></i>
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3">
+                        <i class="fas fa-home me-2"></i>
+                        Christian Quinto Real Estate
+                    </h5>
+                    <p class="text-muted mb-3">
+                        Your trusted partner in finding the perfect property. We offer premium real estate services 
+                        across the Philippines with personalized attention and expert guidance.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="text-muted me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-muted me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-muted me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-muted"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="home.html" class="text-muted text-decoration-none">Home</a></li>
+                        <li><a href="properties.html" class="text-muted text-decoration-none">Properties</a></li>
+                        <li><a href="about.html" class="text-muted text-decoration-none">About</a></li>
+                        <li><a href="services.html" class="text-muted text-decoration-none">Services</a></li>
+                        <li><a href="contact.html" class="text-muted text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-3">Property Types</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="properties.html" class="text-muted text-decoration-none">Houses</a></li>
+                        <li><a href="properties.html" class="text-muted text-decoration-none">Condominiums</a></li>
+                        <li><a href="properties.html" class="text-muted text-decoration-none">Subdivisions</a></li>
+                        <li><a href="properties.html" class="text-muted text-decoration-none">Land Properties</a></li>
+                        <li><a href="properties.html" class="text-muted text-decoration-none">Commercial</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-3">Contact Info</h6>
+                    <div class="contact-info">
+                        <p class="text-muted mb-2">
+                            <i class="fas fa-map-marker-alt me-2"></i>
+                            123 Real Estate Ave, Makati City
+                        </p>
+                        <p class="text-muted mb-2">
+                            <i class="fas fa-phone me-2"></i>
+                            +63 2 1234 5678
+                        </p>
+                        <p class="text-muted mb-2">
+                            <i class="fas fa-envelope me-2"></i>
+                            info@christianquinto.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="text-muted mb-0">
+                        &copy; 2024 Christian Quinto Real Estate. All rights reserved.
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-muted text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-muted text-decoration-none">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
