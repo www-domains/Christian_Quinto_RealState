@@ -19,6 +19,214 @@
     <!-- Custom CSS -->
     <link href="assets/css/style.css" rel="stylesheet">
     
+    <!-- Enhanced Mobile Responsive Styles -->
+    <style>
+        /* Mobile-First Button Enhancements */
+        .btn-mobile {
+            min-height: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 12px;
+            padding: 12px 20px;
+            margin-bottom: 12px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border: 2px solid transparent;
+        }
+        
+        .btn-mobile:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .btn-mobile:active {
+            transform: translateY(0);
+        }
+        
+        /* Enhanced Contact Method Cards */
+        .contact-card {
+            margin-bottom: 20px;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        /* Mobile Button Groups */
+        .mobile-btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding: 0 15px;
+        }
+        
+        /* Enhanced Text Visibility */
+        .btn-primary {
+            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+            border: none;
+            color: white !important;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+        }
+        
+        .btn-success {
+            background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%);
+            border: none;
+            color: white !important;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+        }
+        
+        .btn-outline-primary {
+            border: 2px solid #007bff;
+            color: #007bff !important;
+            background: rgba(255,255,255,0.9);
+            backdrop-filter: blur(10px);
+        }
+        
+        .btn-outline-primary:hover {
+            background: #007bff;
+            color: white !important;
+            border-color: #007bff;
+        }
+        
+        /* Call to Action Button Enhancements */
+        .btn-light {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border: 2px solid #ffffff;
+            color: #007bff !important;
+            text-shadow: none;
+            font-weight: 600;
+        }
+        
+        .btn-light:hover {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            color: #0056b3 !important;
+            border-color: #e9ecef;
+        }
+        
+        .btn-outline-light {
+            border: 2px solid #ffffff;
+            color: #ffffff !important;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .btn-outline-light:hover {
+            background: #ffffff;
+            color: #007bff !important;
+            border-color: #ffffff;
+        }
+        
+        /* Mobile Responsive Adjustments */
+        @media (max-width: 768px) {
+            .btn-mobile {
+                width: 100%;
+                margin-bottom: 15px;
+                font-size: 18px;
+                min-height: 55px;
+            }
+            
+            .contact-card {
+                margin-bottom: 25px;
+            }
+            
+            .mobile-btn-group {
+                padding: 0 10px;
+                gap: 15px;
+            }
+            
+            .card-body {
+                padding: 25px 20px !important;
+            }
+            
+            .feature-icon {
+                font-size: 2.5rem !important;
+                margin-bottom: 20px !important;
+            }
+            
+            .card-title {
+                font-size: 1.4rem !important;
+                margin-bottom: 15px !important;
+            }
+            
+            .card-text {
+                font-size: 1rem !important;
+                line-height: 1.6 !important;
+            }
+        }
+        
+        /* iPhone Specific Optimizations */
+        @media (max-width: 414px) {
+            .btn-mobile {
+                font-size: 16px;
+                min-height: 50px;
+                padding: 14px 18px;
+            }
+            
+            .mobile-btn-group {
+                padding: 0 5px;
+            }
+            
+            .container {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+        
+        /* Android Specific Optimizations */
+        @media (max-width: 360px) {
+            .btn-mobile {
+                font-size: 15px;
+                min-height: 48px;
+                padding: 12px 16px;
+            }
+            
+            .card-body {
+                padding: 20px 15px !important;
+            }
+        }
+        
+        /* High DPI Display Support */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            .btn-mobile {
+                border-width: 1px;
+            }
+        }
+        
+        /* Dark Mode Support */
+        @media (prefers-color-scheme: dark) {
+            .btn-outline-primary {
+                background: rgba(0,0,0,0.8);
+                color: #007bff !important;
+                border-color: #007bff;
+            }
+            
+            .btn-outline-primary:hover {
+                background: #007bff;
+                color: white !important;
+            }
+        }
+        
+        /* Touch Device Optimizations */
+        @media (hover: none) and (pointer: coarse) {
+            .btn-mobile {
+                min-height: 56px;
+                font-size: 18px;
+            }
+            
+            .contact-card:hover {
+                transform: none;
+            }
+            
+            .btn-mobile:hover {
+                transform: none;
+            }
+        }
+    </style>
+    
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -89,7 +297,7 @@
             
             <div class="row g-4">
                 <div class="col-lg-3 col-md-6">
-                    <div class="card h-100 border-0 shadow-sm text-center">
+                    <div class="card h-100 border-0 shadow-sm text-center contact-card">
                         <div class="card-body p-4">
                             <div class="feature-icon mx-auto mb-3">
                                 <i class="fas fa-phone"></i>
@@ -98,7 +306,7 @@
                             <p class="card-text text-muted mb-3">
                                 Speak directly with our team for immediate assistance and personalized service.
                             </p>
-                            <a href="tel:+63212345678" class="btn btn-primary">
+                            <a href="tel:+639709801328" class="btn btn-primary btn-mobile">
                                 <i class="fas fa-phone me-2"></i>
                                 Call Now
                             </a>
@@ -107,7 +315,7 @@
                 </div>
                 
                 <div class="col-lg-3 col-md-6">
-                    <div class="card h-100 border-0 shadow-sm text-center">
+                    <div class="card h-100 border-0 shadow-sm text-center contact-card">
                         <div class="card-body p-4">
                             <div class="feature-icon mx-auto mb-3">
                                 <i class="fab fa-whatsapp"></i>
@@ -116,7 +324,7 @@
                             <p class="card-text text-muted mb-3">
                                 Send us a message on WhatsApp for quick responses and convenient communication.
                             </p>
-                            <a href="https://wa.me/63212345678" class="btn btn-success" target="_blank">
+                            <a href="https://wa.me/639709801328" class="btn btn-success btn-mobile" target="_blank">
                                 <i class="fab fa-whatsapp me-2"></i>
                                 WhatsApp
                             </a>
@@ -125,7 +333,7 @@
                 </div>
                 
                 <div class="col-lg-3 col-md-6">
-                    <div class="card h-100 border-0 shadow-sm text-center">
+                    <div class="card h-100 border-0 shadow-sm text-center contact-card">
                         <div class="card-body p-4">
                             <div class="feature-icon mx-auto mb-3">
                                 <i class="fas fa-envelope"></i>
@@ -134,7 +342,7 @@
                             <p class="card-text text-muted mb-3">
                                 Send us detailed inquiries and we'll respond within 24 hours with comprehensive answers.
                             </p>
-                            <a href="mailto:info@christianquinto.com" class="btn btn-outline-primary">
+                            <a href="mailto:syanquinto43@gmail.com" class="btn btn-outline-primary btn-mobile">
                                 <i class="fas fa-envelope me-2"></i>
                                 Email Us
                             </a>
@@ -143,7 +351,7 @@
                 </div>
                 
                 <div class="col-lg-3 col-md-6">
-                    <div class="card h-100 border-0 shadow-sm text-center">
+                    <div class="card h-100 border-0 shadow-sm text-center contact-card">
                         <div class="card-body p-4">
                             <div class="feature-icon mx-auto mb-3">
                                 <i class="fas fa-map-marker-alt"></i>
@@ -152,7 +360,7 @@
                             <p class="card-text text-muted mb-3">
                                 Schedule an in-person meeting at our Makati office for detailed consultations.
                             </p>
-                            <a href="https://maps.google.com" class="btn btn-outline-primary" target="_blank">
+                            <a href="https://maps.google.com" class="btn btn-outline-primary btn-mobile" target="_blank">
                                 <i class="fas fa-map-marker-alt me-2"></i>
                                 Get Directions
                             </a>
@@ -229,7 +437,7 @@
                                         </div>
                                         <div>
                                             <h6 class="mb-1">Phone Number</h6>
-                                            <p class="text-muted mb-0">+63 2 1234 5678</p>
+                                            <p class="text-muted mb-0">+63 970 980 1328</p>
                                         </div>
                                     </div>
                                 </div>
@@ -241,7 +449,7 @@
                                         </div>
                                         <div>
                                             <h6 class="mb-1">Email Address</h6>
-                                            <p class="text-muted mb-0">info@christianquinto.com</p>
+                                            <p class="text-muted mb-0">syanquinto43@gmail.com</p>
                                         </div>
                                     </div>
                                 </div>
@@ -263,16 +471,16 @@
                         <div class="card border-0 shadow-sm mb-4">
                             <div class="card-body p-4">
                                 <h5 class="card-title mb-3">Quick Contact</h5>
-                                <div class="d-grid gap-2">
-                                    <a href="tel:+63212345678" class="btn btn-outline-primary">
+                                <div class="mobile-btn-group">
+                                    <a href="tel:+639709801328" class="btn btn-primary btn-mobile">
                                         <i class="fas fa-phone me-2"></i>
                                         Call Now
                                     </a>
-                                    <a href="mailto:info@christianquinto.com" class="btn btn-outline-primary">
+                                    <a href="mailto:syanquinto43@gmail.com" class="btn btn-outline-primary btn-mobile">
                                         <i class="fas fa-envelope me-2"></i>
                                         Email Us
                                     </a>
-                                    <a href="https://wa.me/63212345678" class="btn btn-outline-primary" target="_blank">
+                                    <a href="https://wa.me/639709801328" class="btn btn-success btn-mobile" target="_blank">
                                         <i class="fab fa-whatsapp me-2"></i>
                                         WhatsApp
                                     </a>
@@ -435,14 +643,16 @@
                     </p>
                 </div>
                 <div class="col-lg-4 text-lg-end">
-                    <a href="tel:+63212345678" class="btn btn-light btn-lg me-3">
-                        <i class="fas fa-phone me-2"></i>
-                        Call Now
-                    </a>
-                    <a href="properties.html" class="btn btn-outline-light btn-lg">
-                        <i class="fas fa-search me-2"></i>
-                        Browse Properties
-                    </a>
+                    <div class="mobile-btn-group d-lg-block">
+                        <a href="tel:+639709801328" class="btn btn-light btn-mobile me-lg-3 mb-3">
+                            <i class="fas fa-phone me-2"></i>
+                            Call Now
+                        </a>
+                        <a href="properties.html" class="btn btn-outline-light btn-mobile">
+                            <i class="fas fa-search me-2"></i>
+                            Browse Properties
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -501,11 +711,11 @@
                         </p>
                         <p class="text-muted mb-2">
                             <i class="fas fa-phone me-2"></i>
-                            +63 2 1234 5678
+                            +63 970 980 1328
                         </p>
                         <p class="text-muted mb-2">
                             <i class="fas fa-envelope me-2"></i>
-                            info@christianquinto.com
+                            syanquinto43@gmail.com
                         </p>
                     </div>
                 </div>
